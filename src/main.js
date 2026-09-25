@@ -61,7 +61,7 @@ function setMenu(open, restoreFocus = true) {
   $('#app').inert = open;
   $('.chapter-rail').inert = open;
   document.body.classList.toggle('menu-open',open);
-  if(open) $('a',menu).focus({preventScroll:true}); else if(restoreFocus) toggle.focus({preventScroll:true});
+  if(open) requestAnimationFrame(()=>$('a',menu).focus({preventScroll:true})); else if(restoreFocus) toggle.focus({preventScroll:true});
 }
 toggle.addEventListener('click',()=>setMenu(!menuOpen));
 document.addEventListener('keydown',event=>{
@@ -133,7 +133,7 @@ function render(){
     if(index!==seq.index){
       seq.panels.forEach((panel,j)=>{panel.classList.toggle('is-active',j===index);panel.classList.toggle('is-past',j<index);});
       seq.buttons.forEach(button=>{const active=Number(button.dataset.step)===index;button.classList.toggle('is-active',active);if(seq.element.dataset.sequence==='digital')button.setAttribute('aria-expanded',String(active||compact.matches||reduced.matches));else if(active)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');});
-      const counter=$('.digital-counter',seq.element);if(counter)counter.textContent=`${pad(index+1)} / 03`;
+      const counter=$('.digital-counter',seq.element);if(counter){counter.textContent=`${pad(index+1)} / 03`;$('.digital-window>span:first-child',seq.element).textContent=index===0?'PRONTO':'SAÚDE DIGITAL';}
       seq.index=index;
     }
   });
