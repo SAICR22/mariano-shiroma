@@ -14,11 +14,11 @@ Abra `http://localhost:4173`. Todo conteúdo editorial está em `src/content/sit
 
 ## GitHub Pages
 
-1. Reutilizar o repositório existente `Httpyabcx/mariano-shiroma-prototype` (ou criar `mariano-shiroma`, se preferir outro nome). Enviar esta pasta à branch `main` após a revisão editorial. O histórico Git local está incluído no pacote.
+1. Este projeto está em `SAICR22/mariano-shiroma`. A branch `main` contém os arquivos do site. O histórico Git local anterior também acompanha o pacote de entrega.
 2. Em **Settings → Pages → Build and deployment**, escolher **GitHub Actions**.
 3. O workflow `.github/workflows/deploy.yml` compila e publica a cada push em `main`. O arquivo `CNAME` configura a raiz `marianoshiroma.com.br`.
 4. Verificar a configuração DNS existente no Registro.br antes de alterá-la. Usar somente as instruções atuais de **Settings → Pages → Custom domain** e da documentação oficial do GitHub para os registros do domínio raiz. Aguardar a verificação do domínio e ativar **Enforce HTTPS** quando disponível.
-5. Validar o CNPJ e as menções eleitorais com a equipe responsável antes da publicação pública. Confirmar links oficiais das redes sociais em `src/content/socialLinks.js`. O link do programa atualmente leva à página do Livro Amarelo que identifica o capítulo VII; substituí-lo por link direto oficial ao capítulo se disponibilizado.
+5. A identificação eleitoral foi fornecida pela equipe. Revisar as menções regulamentares antes da publicação pública. Confirmar links oficiais das redes sociais em `src/content/socialLinks.js`. O link do programa atualmente leva à página do Livro Amarelo que identifica o capítulo VII; substituí-lo por link direto oficial ao capítulo se disponibilizado.
 
 A hospedagem sob domínio personalizado usa caminhos relativos à raiz. Se for necessário pré-visualizar em `usuario.github.io/mariano-shiroma/` sem domínio, os mesmos caminhos relativos continuam funcionando.
 
