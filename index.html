@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#08090a" />
+  <meta name="theme-color" content="#101110" />
   <meta name="description" content="Dr. Mariano Shiroma: experiência médica, saúde pública e propostas do programa do Partido Missão para o SUS." />
   <title>Dr. Mariano Shiroma | Saúde pública em São Paulo</title>
   <link rel="icon" href="./favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="image" href="./images/mariano-hero.webp" />
   <link rel="stylesheet" href="./src/styles.css" />
 </head>
 <body>
   <a class="skip" href="#inicio">Ir para o conteúdo</a>
   <header class="site-header">
-    <a href="#inicio" class="wordmark" aria-label="Mariano Shiroma — Início">MARIANO <span>SHIROMA</span></a>
-    <div class="header-right"><span class="chapter-count" aria-hidden="true">01 / 07</span><button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">MENU <span class="menu-glyph" aria-hidden="true"><i></i><i></i></span></button></div>
-    <nav id="site-menu" class="site-menu" aria-label="Navegação principal" inert></nav>
+    <a href="#inicio" class="wordmark" aria-label="Mariano Shiroma — Início">MARIANO <span>SHIROMA</span><i aria-hidden="true"></i></a>
+    <div class="header-right"><span class="chapter-count" aria-hidden="true">01 / 07</span><button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="site-menu" aria-expanded="false"><span class="menu-word">MENU</span><span class="menu-glyph" aria-hidden="true"><i></i><i></i></span></button></div>
   </header>
+  <nav id="site-menu" class="site-menu" aria-label="Navegação principal" inert></nav>
   <div class="progress-track" aria-hidden="true"><div class="progress-fill"></div></div>
+  <nav class="chapter-rail" aria-label="Navegação entre cenas"></nav>
   <main id="app"></main>
+  <noscript><p class="no-script">Ative o JavaScript para explorar o conteúdo desta página.</p></noscript>
   <script type="module" src="./src/main.js"></script>
 </body>
 </html>
